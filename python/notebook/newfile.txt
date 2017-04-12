@@ -8,13 +8,3 @@ line 7.
 line 8. 
 line 9. 
 line 10. 
-New Line 11 
-New Line 12 
-New Line 13 
-New Line 14 
-New Line 15 
-New Line 16 
-New Line 17 
-New Line 18 
-New Line 19 
-New Line 20 
