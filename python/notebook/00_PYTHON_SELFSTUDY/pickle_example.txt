@@ -1,0 +1,3 @@
+hello pickle!
+print as they are
+how amazing!
