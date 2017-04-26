@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>패캠대학교 css동아리</title>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <h2>패캠대학교 css동아리 회원목록</h2>
+    <p>동아리 회원목록에서 정보를 확인하세요.</p>
+    <table>
+        <thead></thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>name</td>
+                    <td>age</td>
+                    <td>major</td>
+                    <td>phone_number</td>
+                </tr>
+                <tr>
+                {% import sqlite3 as lite %}
+                {% conn = lite.connect('dongari.db')
+                {% with conn: \
+                    cur = conn.execute("select id, name, age, major, \
+                phone_number from user"
+            
+                    for id, name, age, major, phone_number in members %}
+                    <td>{{ id }}</td>
+                    <td>{{ name }}</td>
+                    <td>{{ age }}</td>
+                    <td>{{ major }}</td>
+                    <td>{{ phone_number }}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+    </table>
+</body>
+</html>
