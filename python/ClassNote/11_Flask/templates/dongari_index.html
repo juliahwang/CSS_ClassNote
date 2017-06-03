@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="hw_FLASKDB.py" />
+    <title>패캠대학교 css동아리</title>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <h2>패캠대학교 css동아리 회원목록</h2>
+    <p>동아리 회원목록에서 정보를 확인하세요.</p>
+    <table>
+        <thead></thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>name</td>
+                    <td>age</td>
+                    <td>major</td>
+                    <td>phone_number</td>
+                </tr>
+                <tr>
+                {% for id, name, age, major, phone_number in row %}
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                {% endfor %}
+                </tr>
+            </tbody>
+    </table>
+</body>
+</html>
